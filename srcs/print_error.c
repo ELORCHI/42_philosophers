@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 11:56:11 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/12 11:58:50 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/12 11:59:49 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "srcs.h"
 
-int main(int argc, char **argv)
+void print_error(char *error_msg)
 {
-	check_args(argc, argv);
+	printf("%s", error_msg);
+	// to edit later
 }

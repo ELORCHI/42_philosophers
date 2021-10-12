@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 11:56:11 by eel-orch         ###   ########.fr       */
+/*   Created: 2019/10/12 22:25:56 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/12 12:21:51 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "srcs.h"
 
-int main(int argc, char **argv)
+int	ft_strcmp(const char *first, const char *second)
 {
-	check_args(argc, argv);
+	int	i;
+
+	i = 0;
+	while (first[i] != '\0' || second[i] != '\0')
+	{
+		if (first[i] != second[i])
+			return ((unsigned char)first[i] - (unsigned char)second[i]);
+		i++;
+	}
+	return (0);
 }

@@ -1,18 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   is_positive_int.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 11:56:11 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/12 12:03:30 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/12 12:15:55 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo.h"
+#include "srcs.h"
 
-int main(int argc, char **argv)
+int is_positive_int(char *str)
 {
-	check_args(argc, argv);
+	int nb;
+
+	if (ft_isint(str) == 1)
+		return (1);
+	nb = ft_atoi(str);
+	if (nb < 0)
+		return (1);
+	return (0);
 }
