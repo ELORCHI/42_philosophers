@@ -1,25 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start_the_race.c                                   :+:      :+:    :+:   */
+/*   eat.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 16:10:55 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/22 18:02:06 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/22 18:02:43 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/22 19:34:53 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs.h"
-
-int start_the_race(t_info *info, t_philo *philos)
+void eat(t_philo *philo)
 {
-	int i;
-
-	i = 0;
-	while (philos[i] != NULL)
-	{
-		pthread_create(philo[i].thread, NULL, firt_things_first, philo[i]);
-		i++;
-	}
+	
 }

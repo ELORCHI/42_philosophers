@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:53:57 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/22 16:20:19 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/22 19:35:29 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ typedef struct s_philo
 	int 			right_fork;
 	pthread_mutex_t *mutex;
 	pthread_t		*thread;
+	
 	int				last_meal_time;
 }			t_philo;
 
