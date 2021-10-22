@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   start_the_race.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/22 16:13:23 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/22 16:10:55 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/22 16:26:49 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "srcs/srcs.h"
+#include "srcs.h"
 
-int main(int argc, char **argv)
+int start_the_race(t_info *info, t_philo *philos)
 {
-	t_inpho		*info;
-	t_philo		*philos;
+	int i;
 
-	inpho = NULL;
-	philo = NULL;
-	if (check_args(argc, argv) == 1)
-		return (1);
-	get_inpho(argc, argv, info);
-	philos = init_philos(info);
-
+	i = 0;
+	while (philos[i] != NULL)
+	{
+		pthread_create(philo[i].thread, NULL, firt_things_first);
+		i++;
+	}
 }
