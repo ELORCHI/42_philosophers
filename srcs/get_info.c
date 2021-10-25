@@ -6,14 +6,16 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:08:14 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 16:17:52 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/24 20:13:23 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void	get_inpho(int argc, char **args, t_info *info)
+t_info *get_info(int argc, char **args)
 {
+	t_info *info;
+
 	info = (t_info *)malloc(sizeof(t_info));
 	info->philos_nb = ft_atoi(args[1]);
 	info->die_time = ft_atoi(args[2]);
@@ -21,4 +23,5 @@ void	get_inpho(int argc, char **args, t_info *info)
 	info->sleep_time = ft_atoi(args[4]);
 	if (argc == 6)
 		info->must_eat_nb = ft_atoi(args[5]);
+	return (info);
 }

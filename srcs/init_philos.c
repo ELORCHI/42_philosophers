@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/20 15:18:44 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/22 16:24:19 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/24 20:18:32 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,25 @@
 t_philo	*init_philos(t_info *info)
 {
 	t_philo *philo;
+	t_sm	*sm;
 	int		i;
 
 	i = 0;
-	philo = (t_philo *)malloc(sizeof(t_philo) * info->philos_nb + 1);
-	while (i < info->philos)
+	philo = (t_philo *)malloc(sizeof(t_philo) * info->philos_nb);
+	sm = (t_sm *)malloc(sizeof(t_sm));
+	sm->mutexs =  (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * info->philos_nb);
+	pthread_mutex_init(&(sm->p), NULL);
+	while (i < info->philos_nb)
 	{
 		philo[i].id = i + 1;
 		philo[i].meals_nb = 0;
 		philo[i].left_fork = i;
 		philo[i].right_fork = (i + 1) % info->philos_nb;
 		philo[i].thread = (pthread_t *)malloc(sizeof(pthread_t));
-		philo[i].mutex = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t));
-		pthread_mutex_init(philo.mutex, NULL);
+		philo[i].info = info;
+		pthread_mutex_init(sm->mutexs + i, NULL);
+		philo[i].sm = sm;
 		i++;
 	}
-	philo[i] = NULL:
+	return (philo);
 }

@@ -6,13 +6,14 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:53:57 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/22 19:35:29 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/25 18:09:04 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SRCS_H
 # define SRCS_H
 
+#include <sys/time.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -29,16 +30,24 @@ typedef struct t_info
 	int	must_eat_nb;
 }				t_info;
 
+
+typedef struct s_sm
+{
+	pthread_mutex_t *mutexs;
+	pthread_mutex_t p;
+	uint64_t		start;
+}				t_sm;
+
 typedef struct s_philo
 {
 	int				id;
 	int				meals_nb;
 	int				left_fork;
 	int 			right_fork;
-	pthread_mutex_t *mutex;
 	pthread_t		*thread;
-	
-	int				last_meal_time;
+	t_sm			*sm;	
+	uint64_t		last_meal_time;
+	t_info			*info;
 }			t_philo;
 
 int		ft_strcmp(const char *first, const char *second);
@@ -51,5 +60,13 @@ int		ft_isdigit(int c);
 
 void	print_error(char *error_msg);
 char	*ft_itoa(int n);
-
+t_info	*get_info(int argc, char **args);
+t_philo	*init_philos(t_info *info);
+void	*first_things_first(void *data);
+int start_the_race(t_info *info, t_philo *philo);
+void ft_sleep(int s);
+void eat(t_philo *philo);
+void display(t_philo *philo, char *msg);
+uint64_t	get_time(void);
+void	timer(int t);
 #endif
