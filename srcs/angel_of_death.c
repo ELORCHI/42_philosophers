@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 14:18:50 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 14:23:06 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:01:34 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	angel_of_death(t_philo *philo, t_info *info)
 {
-	int k;
-	int i;
+	int	k;
+	int	i;
 
 	k = 1;
 	while (k)
@@ -25,9 +25,10 @@ void	angel_of_death(t_philo *philo, t_info *info)
 		{
 			if (get_time() - philo[i].last_meal_time > info->die_time)
 			{
+				pthread_mutex_lock(&(philo[i].sm->is_eating));
 				display(&(philo[i]), "died");
 				k = 0;
-				break;
+				break ;
 			}
 			i++;
 		}

@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:08:14 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 12:22:12 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:08:42 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-t_info *get_info(int argc, char **args)
+t_info	*get_info(int argc, char **args)
 {
-	t_info *info;
+	t_info	*info;
 
 	info = (t_info *)malloc(sizeof(t_info));
 	info->philos_nb = ft_atoi(args[1]);

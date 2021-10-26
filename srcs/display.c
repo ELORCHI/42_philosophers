@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:39:51 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 12:15:48 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:02:58 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void display(t_philo *philo, char *msg)
+void	display(t_philo *philo, char *msg)
 {
-	uint64_t time;
+	uint64_t	time;
 
 	time = get_time() - philo->sm->start;
 	pthread_mutex_lock(&(philo->sm->p));

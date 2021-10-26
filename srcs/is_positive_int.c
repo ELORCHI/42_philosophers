@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 12:03:30 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 12:15:55 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 16:11:03 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int is_positive_int(char *str)
+int	is_positive_int(char *str)
 {
-	int nb;
+	int	nb;
 
 	if (ft_isint(str) == 1)
 		return (1);
