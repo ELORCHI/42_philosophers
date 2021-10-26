@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:53:57 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 10:35:15 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 14:20:45 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ void		display(t_philo *philo, char *msg);
 uint64_t	get_time(void);
 void		timer(int t);
 int			check_nb_meals(t_philo *philo);
+void		angel_of_death(t_philo *philo, t_info *info);
 #endif
