@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_inpho.c                                        :+:      :+:    :+:   */
+/*   check_nb_meals.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/12 16:08:14 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 11:03:47 by eel-orch         ###   ########.fr       */
+/*   Created: 2021/10/26 10:25:31 by eel-orch          #+#    #+#             */
+/*   Updated: 2021/10/26 11:18:54 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-t_info *get_info(int argc, char **args)
+int check_nb_meals(t_philo *philo)
 {
-	t_info *info;
+	int i;
+	int nb_philos;
+	int	must_eat;
 
-	info = (t_info *)malloc(sizeof(t_info));
-	info->philos_nb = ft_atoi(args[1]);
-	info->die_time = ft_atoi(args[2]);
-	info->eat_time = ft_atoi(args[3]);
-	info->sleep_time = ft_atoi(args[4]);
-	if (argc == 6)
-		info->must_eat_nb = ft_atoi(args[5]);
-	else
-	info->must_eat_nb = -1;
-	return (info);
+	must_eat = philo[0].info->must_eat_nb;
+	nb_philos = philo[0].info->philos_nb;
+	i = 0;
+	while (i < nb_philos)
+	{
+		if (philo[i].meals_nb == must_eat)
+			i++;
+		else
+			return (1);
+	}
+	return (0);
 }

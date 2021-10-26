@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:53:57 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/25 18:09:04 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 10:35:15 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ typedef struct t_info
 	int sleep_time;
 	int	must_eat_nb;
 }				t_info;
-
 
 typedef struct s_sm
 {
@@ -58,15 +57,16 @@ int		ft_isint(char *str);
 int		ft_isdigit(int c);
 
 
-void	print_error(char *error_msg);
-char	*ft_itoa(int n);
-t_info	*get_info(int argc, char **args);
-t_philo	*init_philos(t_info *info);
-void	*first_things_first(void *data);
-int start_the_race(t_info *info, t_philo *philo);
-void ft_sleep(int s);
-void eat(t_philo *philo);
-void display(t_philo *philo, char *msg);
+void		print_error(char *error_msg);
+char		*ft_itoa(int n);
+t_info		*get_info(int argc, char **args);
+t_philo		*init_philos(t_info *info);
+void		*first_things_first(void *data);
+int			start_the_race(t_info *info, t_philo *philo);
+void		ft_sleep(int s);
+void		eat(t_philo *philo);
+void		display(t_philo *philo, char *msg);
 uint64_t	get_time(void);
-void	timer(int t);
+void		timer(int t);
+int			check_nb_meals(t_philo *philo);
 #endif
