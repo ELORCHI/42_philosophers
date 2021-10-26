@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 16:08:14 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 11:03:47 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 12:22:12 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ t_info *get_info(int argc, char **args)
 	if (argc == 6)
 		info->must_eat_nb = ft_atoi(args[5]);
 	else
-	info->must_eat_nb = -1;
+		info->must_eat_nb = -1;
 	return (info);
 }

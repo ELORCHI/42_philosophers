@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 10:25:31 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 11:18:54 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 12:24:50 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int check_nb_meals(t_philo *philo)
 {
 	int i;
-	int nb_philos;
+	char nb_philos;
 	int	must_eat;
 
 	must_eat = philo[0].info->must_eat_nb;

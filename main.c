@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 11:16:46 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/26 12:23:09 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,12 @@ int main(int argc, char **argv)
 				k = 0;
 				break;
 			}
+			i++;
 		}
 		if (check_nb_meals(philo) == 0)
-			break;
+		{
+			k = 0;
+		}
 	}
 	//free
 	return (0);
