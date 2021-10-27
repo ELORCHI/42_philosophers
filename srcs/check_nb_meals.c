@@ -18,6 +18,8 @@ int check_nb_meals(t_philo *philo)
 	char nb_philos;
 	int	must_eat;
 
+	if (philo[0].info->must_eat_nb == -1)
+		return (2);
 	must_eat = philo[0].info->must_eat_nb;
 	nb_philos = philo[0].info->philos_nb;
 	i = 0;

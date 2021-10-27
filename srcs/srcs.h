@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:53:57 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 14:20:45 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 11:21:53 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ typedef struct s_sm
 {
 	pthread_mutex_t *mutexs;
 	pthread_mutex_t p;
+	pthread_mutex_t	is_eating;
 	uint64_t		start;
 }				t_sm;
 

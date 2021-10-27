@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 19:39:51 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 12:15:48 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 11:14:57 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void display(t_philo *philo, char *msg)
 
 	time = get_time() - philo->sm->start;
 	pthread_mutex_lock(&(philo->sm->p));
-	printf("%llu philo %d %s\n", time, philo->id, msg);
+	printf("%llu philo %d %s %d\n", time, philo->id, msg, philo->meals_nb);
 	if (strcmp(msg, "died") == 0)
 		return ;
 	pthread_mutex_unlock(&(philo->sm->p));
