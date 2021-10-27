@@ -24,6 +24,8 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	info = get_info(argc, argv);
+	if (info == NULL)
+		return (0);
 	philo = init_philos(info);
 	start_the_race(info, philo);
 	angel_of_death(philo, info);

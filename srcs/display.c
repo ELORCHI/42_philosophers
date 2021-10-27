@@ -18,7 +18,7 @@ void	display(t_philo *philo, char *msg)
 
 	time = get_time() - philo->sm->start;
 	pthread_mutex_lock(&(philo->sm->p));
-	printf("%llu philo %d %s %d\n", time, philo->id, msg, philo->meals_nb);
+	printf("%llu philo %d %s\n", time, philo->id, msg);
 	if (strcmp(msg, "died") == 0)
 		return ;
 	pthread_mutex_unlock(&(philo->sm->p));

@@ -21,6 +21,11 @@ t_info	*get_info(int argc, char **args)
 	info->die_time = ft_atoi(args[2]);
 	info->eat_time = ft_atoi(args[3]);
 	info->sleep_time = ft_atoi(args[4]);
+	if (info->philos_nb == 0)
+	{
+		free(info);
+		return (NULL);
+	}
 	if (argc == 6)
 		info->must_eat_nb = ft_atoi(args[5]);
 	else
