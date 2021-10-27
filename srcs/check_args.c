@@ -6,15 +6,15 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:56:19 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 14:15:52 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:16:26 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int check_args(int nb_args, char **args)
+int	check_args(int nb_args, char **args)
 {
-	int i;
+	int	i;
 
 	if (nb_args != 5 && nb_args != 6)
 	{

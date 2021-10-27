@@ -6,21 +6,22 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 16:10:55 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/25 18:16:38 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:14:20 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-int start_the_race(t_info *info, t_philo *philo)
+int	start_the_race(t_info *info, t_philo *philo)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	philo[0].sm->start =  get_time();
+	philo[0].sm->start = get_time();
 	while (i < info->philos_nb)
 	{
-		pthread_create(philo[i].thread, NULL, first_things_first, (void *)(&(philo[i])));
+		pthread_create(philo[i].thread, NULL,
+			first_things_first, (void *)(&(philo[i])));
 		usleep(1000);
 		i++;
 	}

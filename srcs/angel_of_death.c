@@ -6,7 +6,7 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/26 14:18:50 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/27 11:20:46 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:15:49 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	angel_of_death(t_philo *philo, t_info *info)
 {
-	int k;
-	int i;
+	int	k;
+	int	i;
 
 	k = 1;
 	while (k)

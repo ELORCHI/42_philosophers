@@ -6,14 +6,13 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/12 11:58:50 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/12 11:59:49 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:22:22 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void print_error(char *error_msg)
+void	print_error(char *error_msg)
 {
 	printf("%s", error_msg);
-	// to edit later
 }

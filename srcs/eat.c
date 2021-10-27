@@ -6,13 +6,13 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:02:43 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/27 11:19:46 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:17:20 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs.h"
 
-void eat(t_philo *philo)
+void	eat(t_philo *philo)
 {
 	pthread_mutex_lock(philo->sm->mutexs + philo->left_fork);
 	display(philo, "has taken a fork");
