@@ -6,14 +6,13 @@
 /*   By: eel-orch <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:39:56 by eel-orch          #+#    #+#             */
-/*   Updated: 2021/10/26 14:23:11 by eel-orch         ###   ########.fr       */
+/*   Updated: 2021/10/27 12:16:36 by eel-orch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "srcs/srcs.h"
-#include <string.h>
-#include <sys/errno.h>
-int main(int argc, char **argv)
+
+int	main(int argc, char **argv)
 {
 	t_info		*info;
 	t_philo		*philo;
