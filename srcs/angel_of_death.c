@@ -23,7 +23,7 @@ void	angel_of_death(t_philo *philo, t_info *info)
 		i = 0;
 		while (i < info->philos_nb)
 		{
-			if (get_time() - philo[i].last_meal_time > info->die_time)
+			if (get_time() - philo[i].last_meal_time > (uint64_t)info->die_time)
 			{
 				pthread_mutex_lock(&(philo->sm->is_eating));
 				display(&(philo[i]), "died");
